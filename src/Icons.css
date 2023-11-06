@@ -1,0 +1,32 @@
+
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Baggrundsfarve for containeren (hvid i dette eksempel) */
+    width: 70px; /* Ændr bredden efter behov */
+    height: 70px; /* Gør højden den samme som bredden for at lave en cirkel */
+    border-radius: 50%; /* Rund containerens kanter for at lave en cirkel */
+    margin: 0% 4%;
+    border: 4px solid #fd0202;
+}
+
+.ghost-icon {
+    color: rgb(0, 0, 0); /* Sæt farven til sort */
+    animation: beat 1s infinite; /* Anvend pulserende effekt */
+    font-size: 45px;
+    
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Skalér op til 110% af originalstørrelsen */
+    }
+    100% {
+        transform: scale(1);
+    }
+}

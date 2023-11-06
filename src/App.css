@@ -1,0 +1,876 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of reset.css */
+/*Grid styling til menuen */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of reset.css */
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Raleway', sans-serif; /* Brug Raleway-skrifttypen */
+  color: white;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Coiny', sans-serif; /* Brug Coiny-skrifttypen */
+  font-weight: lighter;
+}
+
+h2 {
+font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  font-family: 'Coiny', sans-serif; /* Brug Coiny-skrifttypen */
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin: 4%;
+  padding: 6% 0;
+  color: white;
+  font-family: 'Coiny', sans-serif; /* Brug Coiny-skrifttypen */
+  font-weight: lighter;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: white;
+    background-color: #171717;
+  }
+ 
+}
+.appMenu{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width:100%;
+  background-color: #292929;
+  z-index: 99999;
+}
+
+/* Aktivt menupunkt til appMenu  */
+.appMenu a.active {
+  background-color: #8E070E;
+  color: white;
+}
+
+strong{
+font-weight: 900;
+}
+.submitBtn{
+  background-color: #74A4BC;
+  border:none;
+  color: white;
+  font-family: 'coiny';
+  margin-top: 1rem;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 25px;
+}
+.log-text {
+  font-family: 'Raleway', sans-serif; 
+  font-size: 24px;
+}
+.LogContainer{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 1rem;
+}
+.film-info-box{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-left: 10%;
+  flex-direction: column;
+}
+.inputBox{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-family: 'coiny';
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 1rem;
+  z-index: 2;
+
+}
+#findFilmen{
+  background-color: #8E070E;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: 'coiny';
+  height: 2rem;
+}
+#gemFilmen{
+  background-color: green;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: 'coiny';
+  text-align: center;
+  height: 1.5rem;
+}
+#genreSelect{
+  text-align: center;
+  border-radius: 15px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 1.5rem;
+}
+.moviePoster{
+  height: 350px;
+  margin-top: 1rem;
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+  margin-bottom: 0.5rem;
+}
+.container {
+  background-image: url('assets/moviefindeer.jpg'); 
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.film-info-text {
+  font-size: 14px;
+  margin: 0;
+}
+
+.modal-content {
+
+  width: 100%;
+  border-radius: 5%;
+  margin-left: 36%;
+}
+.arrow-left{
+color: white;
+font-size: 2rem;
+}
+
+.close-btn {
+  border-radius: 6px;
+  padding: 1% 4%;
+  font-size: 18px;
+  background-color: #8E070E;
+  color: white;
+  margin: 1%;
+  align-items: center;
+  text-align: center;
+  
+  font-family: 'Raleway', sans-serif; 
+  font-weight: lighter;
+}
+
+.text-style {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movie-picture {
+  width: 100%;
+  margin-top: 12%;
+}
+
+.moviemagmey-picture {
+  width: 60%;
+  height: 30%;
+  margin: 5%;
+}
+
+.button-link  {
+  border-radius: 40px;
+  height: 4rem;
+  width: 20rem;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif; 
+  font-weight: bolder;
+  background-color: #8E070E;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 35px;
+  border: 2px solid #8E070E;
+}
+
+
+/*--- Main page --*/
+
+.profil-picture {
+  margin: 5%;
+}
+
+.line {
+  width: 68%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.movie-header, p {
+  font-family: 'Coiny', sans-serif; /* Brug Coiny-skrifttypen */
+  font-weight: lighter;
+  margin: 1% 10% 1% 10%;
+}
+
+.movie-tekst {
+  font-family: 'Raleway', sans-serif;
+  align-items: center;
+  text-align: center;
+  margin: 8% 16%;
+  line-height: 1.2;
+  
+}
+
+.movie-tekst-to {
+  font-family: 'Raleway', sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-cowboy {
+  position: absolute;
+  right: 0%;
+  top: 30%;
+}
+
+.buttons-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:1rem;
+}
+
+.button-front {
+  border-radius: 10px;
+  padding: 0.5em 0.2em;
+  width: 68%;
+  font-size: 25px;
+  background-color: #8E070E;
+  color: white;
+  cursor: pointer;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Tilføj skygge efter dine præferencer */
+  font-family: 'Coiny', sans-serif; 
+  font-weight: lighter;
+}
+
+/*---- Find film page ---*/
+
+.profil-picture-to {
+  align-items: flex-end;
+}
+
+.film-header {
+  margin: 20% 0%;
+}
+
+.navigation-profile {
+  display: flex;
+  align-items: center; /* Centrer elementerne vertikalt */
+  margin: 2%;
+}
+
+.profil-picture-to {
+  margin-left: auto; /* Flyt billedet helt til højre ved at udnytte auto margin */
+  height: 4rem;
+  width: 4rem;
+}
+
+.film-tekst {
+  font-size: 28px;
+  align-items: center;
+  text-align: center;
+  margin: 8% 3%;
+  line-height: 1.2;
+}
+
+/*---- Swipe page ---*/
+
+.logo-nohat {
+  position: absolute;
+  right: 89%;
+  top: 45%;
+}
+
+.logo-straw {
+  position: absolute;
+  right: 86%;
+  top: 10%;
+}
+
+.swipe-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.button-swipe {
+  border-radius: 30px;
+  padding: 0.8em 2.9em;
+  font-size: 20px;
+  background-color: #8E070E;
+  color: white;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); 
+  font-family: 'Coiny', sans-serif; 
+  font-weight: lighter;
+  margin-bottom: 10%;
+}
+
+/*----- Profil side -----*/
+
+.user-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.user-profile {
+  width: 4rem;
+  height: 4rem;
+}
+
+.john-text {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.titel-text {
+  margin-top: 5%;
+  margin: 0;
+}
+
+.logo-side {
+  position: absolute;
+  top: 10%;
+}
+
+.profile-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.icons-text {
+  padding-bottom: 0;
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin-bottom: 0;
+  padding: 2% 0%;
+  color: white;
+  font-family: 'Coiny', sans-serif; /* Brug Coiny-skrifttypen */
+  font-weight: lighter;
+}
+
+.button-magnet {
+  border-radius: 20px;
+  padding: 3% 8%;
+  font-size: 19px;
+  background-color: #74A4BC;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); 
+  font-family: 'Coiny', sans-serif; 
+  font-weight: lighter;
+}
+
+.button-magnet-container {
+  margin: 7% 4%;
+}
+
+.friend {
+  width: 100%;
+  height: 100%;
+}
+
+.brian-friend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0% 2%;
+}
+
+.friends {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.my-friends-text {
+  margin: 0 4%;
+  padding: 0%;
+  padding-top: 5%;
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin: 4%;
+  color: white;
+  font-family: 'Coiny', sans-serif; /* Brug Coiny-skrifttypen */
+  font-weight: lighter;
+}
+
+.empty-text {
+  font-family: 'Raleway', sans-serif; 
+  font-weight: lighter;
+  text-align: baseline;
+  font-size: 20px;
+}
+
+.button-friends-container {
+  margin: 0 4%;
+}
+
+.movie-history-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  margin: 0% 4%;
+  
+}
+
+.movie-profile {
+  width: 20%;
+  height: 20%;
+  padding-bottom: 8%;
+}
+
+.movie-history-text {
+  padding: 0%;
+  padding-top: 10%;
+}
+
+/*---- MagnetPage ----*/
+
+.logo-magnet {
+  position: absolute;
+  top: 6%;
+  right: 2%;
+  width: 25%;
+}
+
+.movie-magnet-text {
+  margin: 0 10%;
+}
+
+.magnet-icons {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5%;
+  gap: 10%;
+  border: 4px solid #ffffff;
+  width: 80%;
+  padding: 2%;
+}
+
+.movie-magnet-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ten-movies-text {
+  margin: 0%;
+  line-height: 1.9;
+  margin: 8% 9%;
+  font-size: 20px;
+}
+
+/*---- Tilføj ven modal --- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+.modal {
+  background: #171717;
+  width: 70%;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.modal input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #171717;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif; 
+}
+
+.modal button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif; 
+  border: none;
+  border-radius: 10px;
+  width: 38%;
+  background-color: #74A4BC;
+  color: white;
+  cursor: pointer;
+}
+
+.modal button:first-child {
+  background-color: #74A4BC;
+}
+
+/*---- RoomPage ----*/
+
+.button-room {
+  border-radius: 20px;
+  padding: 3% 8%;
+  font-size: 19px;
+  background-color: #74A4BC;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); 
+  font-family: 'Coiny', sans-serif; 
+  font-weight: lighter;
+}
+
+.button-room-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'Raleway', sans-serif; 
+}
+
+.join-room {
+  width: 65%;
+  margin: 10% 13%;
+  padding: 0% 4%;
+  border-radius: 5%;
+  background-color: #9B9B9B;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+}
+
+.room-text {
+  font-family: 'Raleway', sans-serif; 
+}
+
+.popup-content{
+  position:relative;
+  top:0;
+
+}
+
+/*---- SwiperPage ----*/
+.bottomButtons{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  bottom: 20px;
+}
+
+.bottomButtons .NejKnap {
+  width: 9.0625rem;
+  height: 3.3125rem;
+ border: solid 2px #E50914 ;
+ filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.75));
+ border-radius: 30px 30px 30px 0%;
+}
+
+.bottomButtons .JaKnap {
+  width: 9.0625rem;
+  height: 3.3125rem;
+border: solid 2px #A2FF86 ;
+filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.75));
+border-radius: 30px 30px 30px 0%;
+}
+.bottomButtons .Nej {
+ 
+  color: #E50914;
+
+}
+
+.bottomButtons .Ja {
+
+  color: #A2FF86;
+
+}
+
+.modalBox {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  width: 100vw;
+}
+
+.modalBanner {
+  background-color: rgba(255, 255, 255, 0.6); /* White with 80% opacity */
+  width: 100%;
+  padding: 2px; /* Adjust as needed */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalTitel {
+  color: #FBFF4E; /* Yellow color */
+  font-size: 2.7em; /* Adjust as needed */
+  font-family: Racing Sans One; /* Use a suitable font-family */
+  margin-bottom: 10px; /* Adjust as needed */
+  -webkit-text-stroke-width: 1.5px;
+-webkit-text-stroke-color: black;
+}
+
+
+.moviemagmey-picture-swipe {
+  position: fixed;
+  top: -140%;
+  width: 50%;
+}
+.Star1 {
+position: fixed;
+top: 60%;
+right: 25%;
+}
+.Star2 {
+  position: fixed;
+top: 0%;
+right: 10%;
+transform: scaleX(-1);
+}
+.Star3 {
+  position: fixed;
+  top: 0%;
+  left: 20%;
+}
+.swipePoster {
+  position: fixed;
+  width: 100vw;
+  top:0;
+  left:0;
+  z-index: -5;
+}
+
+.gradiant {
+  height: 80vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  bottom:0;
+  z-index: 0;
+  background: linear-gradient(360deg, #161414 50%, rgba(58, 58, 58, 0.0 ) 90%);
+}
+
+.swipe-info-box {
+ width: 60%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.swipe-info-text {
+  position: fixed;
+  bottom: 30%;
+  left: 0;
+  z-index: 3;
+}
+
+.titel {
+  position: fixed;
+  bottom: 34%;
+  left: 0;
+
+color: #FBFF4E;
+width: 70%;
+height: 5%;
+font-family: Racing Sans One;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
+
+}
+.rating {
+position: fixed;
+right: 0;
+float: right;
+}
+
+.info {
+  color: #FBFF4E;
+  z-index: 100;
+  position: fixed;
+  bottom: 33%;
+  font-size: 2.5rem !important;
+ right: 8%;
+}
+
+.swipeBox {
+float: right;
+  text-align: center;
+  color: white;
+  font-family: 'coiny';
+  width: 50%;
+  margin-top: 1rem;
+  z-index: 2;
+  -webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
+}
+#genreSwipe{
+ position: fixed;
+ top:1.4%;
+ right: 0%;
+  text-align: center;
+  border-radius: 15px;
+  width: 40%;
+  height: 2.2rem;
+}
